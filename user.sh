@@ -11,6 +11,6 @@ systemctl daemon-reload
 systemctl enable user 
 systemctl start user
 
-cp /home/centos/roboshopProject/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /root/roboshopProject/mongo.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsr72.online </app/schema/user.js
