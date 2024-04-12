@@ -1,5 +1,8 @@
+script=$(realpath "$0")
+script_path=$(dirnmame "$script")
+source ${script_path}/common.sh
 dnf module disable mysql -y 
-cp /home/centos/roboshopProject/mysql.repo /etc/yum.repos.d/mysql.repo
+cp ${script_path}/mysql.repo /etc/yum.repos.d/mysql.repo
 yum install mysql-community-server -y
 systemctl enable mysqld
 systemctl start mysqld
